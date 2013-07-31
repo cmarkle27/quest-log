@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 var request = require('request');
-var fs = require('fs');
 var nconf = require("nconf");
 
 nconf.env().argv();
@@ -8,7 +7,6 @@ nconf.env().argv();
 var url = nconf.get("url");
 var username = nconf.get("username");
 var password = nconf.get("password");
-var log = nconf.get("log");
 
 request(url, function(err, response, body) {
 	if (err) throw err;
@@ -37,8 +35,6 @@ request(url, function(err, response, body) {
 		break;
 	}
 
-	fs.appendFile(log, message, function(err) {
-		if (err) throw err;
-	});	
+	console.log(message);
 
 }).auth(username, password, true);

@@ -11,5 +11,4 @@
 A Node.js script to run url requests and log responses
 
 ### Example Usage
-./index.js --url http://example.com/api/go --log api.log --username admin --password secret 
-
+./index.js --url http://example.com/api/go --username bender --password lowbrau >> logs/campgrounds.log

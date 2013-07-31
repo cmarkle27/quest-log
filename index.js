@@ -37,7 +37,7 @@ request(url, function(err, response, body) {
 		break;
 	}
 
-	fs.appendFile('logs/'+log, message, function(err) {
+	fs.appendFile(log, message, function(err) {
 		if (err) throw err;
 	});	
 

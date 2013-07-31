@@ -39,7 +39,6 @@ request(url, function(err, response, body) {
 
 	fs.appendFile('logs/'+log, message, function(err) {
 		if (err) throw err;
-		console.log('The "data to append" was appended to file!');
 	});	
 
 }).auth(username, password, true);

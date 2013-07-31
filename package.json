@@ -1,0 +1,16 @@
+{
+  "name": "quest-log",
+  "version": "0.0.2",
+  "description": "A Node.js script to run url requests and log responses",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Chris Markle",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.25.0",
+    "nconf": "~0.6.7"
+  } 
+}

@@ -16,25 +16,25 @@ request(url, function(err, response, body) {
 
 	switch(response.statusCode) {
 		case 503:
-			message = date + " :: error :: 503 (Bad Gateway)";
+			message = " :: error :: 503 (Bad Gateway)";
 		break;
 		case 500:
-			message = date + " :: error :: 500 (Unexpected Error)";
+			message = " :: error :: 500 (Unexpected Error)";
 		break;
 		case 404:
-			message = date + " :: error :: 404 (URL Not Found)";
+			message = " :: error :: 404 (URL Not Found)";
 		break;
 		case 401:
-			message = date + " :: error :: 401 (Not Authorized)";
+			message = " :: error :: 401 (Not Authorized)";
 		break;
 		case 200:
-			message = date + " :: success :: " + response.body;
+			message = " :: success :: " + response.body;
 		break;
 		default:
-			message = date + " :: error :: 000 (Unknown Error)";
+			message = " :: error :: 000 (Unknown Error)";
 		break;
 	}
 
-	console.log(message);
+	console.log(date + message);
 
 }).auth(username, password, true);
